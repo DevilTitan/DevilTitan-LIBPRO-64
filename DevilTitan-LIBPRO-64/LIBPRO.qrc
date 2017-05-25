@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/LIBPRO"/>
+    <qresource prefix="/appscreen">
+        <file>Resources/appscreen/LIBPRO-symbol.png</file>
+        <file>Resources/appscreen/login-background.png</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>Resources/icon/administrator.png</file>
+        <file>Resources/icon/dataProcessor.png</file>
+        <file>Resources/icon/LIBPRO-icon.png</file>
+        <file>Resources/icon/window-icon.png</file>
+        <file>Resources/icon/reader.png</file>
+        <file>Resources/icon/librarian.png</file>
+    </qresource>
+    <qresource prefix="/barIcon">
+        <file>Resources/icon/001-sharing.png</file>
+        <file>Resources/icon/002-worldwide.png</file>
+        <file>Resources/icon/003-user.png</file>
+        <file>Resources/icon/004-search.png</file>
+        <file>Resources/icon/add.png</file>
+        <file>Resources/icon/list.png</file>
+    </qresource>
+</RCC>
