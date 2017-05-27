@@ -7,8 +7,8 @@ Librarian::Librarian(QWidget *parent)
 
 	rdb = QSqlDatabase::addDatabase("QMYSQL");
 	rdb.setHostName("127.0.0.1");
-	rdb.setUserName("root");
-	rdb.setPassword("password");
+	rdb.setUserName("DevilTitan");
+	rdb.setPassword("DevilTitan");
 	rdb.setDatabaseName("libpro_user");
 
 	if (rdb.open()) {
