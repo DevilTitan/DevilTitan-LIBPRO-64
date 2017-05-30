@@ -6,7 +6,7 @@ TEMPLATE = app
 TARGET = DevilTitan-LIBPRO-64
 DESTDIR = ../x64/Debug
 QT += core sql uitools widgets gui
-CONFIG += debug
+CONFIG += debug console
 DEFINES += WIN64 QT_DLL QT_SQL_LIB QT_UITOOLS_LIB QT_WIDGETS_LIB
 INCLUDEPATH += ./GeneratedFiles \
     . \
@@ -16,3 +16,4 @@ MOC_DIR += ./GeneratedFiles/debug
 OBJECTS_DIR += debug
 UI_DIR += ./GeneratedFiles
 RCC_DIR += ./GeneratedFiles
+include(DevilTitan-LIBPRO-64.pri)
