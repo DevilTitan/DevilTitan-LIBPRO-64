@@ -5,7 +5,10 @@
 #include <QVector>
 #include <QString>
 #include <QSqlDatabase>
-#include <Qset>
+#include <QStandardItemModel>
+#include <QMap>
+#include "book.h"
+#include "borrowbook.h"
 
 
 class Reader : public QWidget
@@ -15,25 +18,28 @@ class Reader : public QWidget
 public:
 	Reader(QWidget *parent = Q_NULLPTR);
 	~Reader();
+     QMap<QString,int> borrow;
 
 
 private slots:
 
-    void on_bookList_doubleClicked(const QModelIndex &index);
+    void on_bookList_clicked(const QModelIndex &index);
 
     void on_searchBar_textChanged(const QString &arg1);
 
-    void on_pushButton_2_clicked();
+    void on_addbtn_clicked();
+
+
+
+
+
+    void on_bookListbtn_clicked();
+
+    void on_removebtn_clicked();
 
 private:
 	Ui::Reader ui;
-    QVector<QString> borrow;
-    QString isbn ;
-    QString name ;
-    QString author ;
-    QString year ;
-    QString publisher;
-    int quantity;
-    QSqlDatabase rdb;
 
+    book curbook;
+    //QSqlDatabase rdb;
 };
