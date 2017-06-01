@@ -1,52 +1,65 @@
 ﻿#include "Librarian.h"
-#include <qdebug.h>
+
+#include <QPixmap>
+#include <QSqlDatabase>
+#include <QSqlQueryModel>
+#include <QSqlTableModel>
+#include <QDebug>
+#include <QVariant>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <algorithm>
+#include <string>
+#include <QtAlgorithms>
+#include <algorithm>
+#include <QStandardItemModel>
+#include <QSet>
+
 Librarian::Librarian(QWidget *parent)
 	: QWidget(parent)
 {
-	setupUi(this);
+	ui.setupUi(this);
+	displayBook(ui);
+	QPixmap bkgnd(":/appscreen/Resources/appscreen/1.png");
+	bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+	QPalette palette;
+	palette.setBrush(QPalette::Background, bkgnd);
+	this->setPalette(palette);
+}
 
+void displayBook(Ui::Librarian ui)
+
+{
+	QSqlDatabase rdb;
 	rdb = QSqlDatabase::addDatabase("QMYSQL");
 	rdb.setHostName("127.0.0.1");
 	rdb.setUserName("DevilTitan");
 	rdb.setPassword("DevilTitan");
 	rdb.setDatabaseName("libpro_user");
+	rdb.open();
 
-	if (rdb.open()) {
-		qDebug() << " opened ";
-		QSqlQuery rquery(rdb);
-		if (rquery.exec("SELECT * FROM reader_rent")) {
-			while (rquery.next()) {
-				qDebug() << rquery.value(0) << rquery.value(1) << rquery.value(2) << rquery.value(3) << rquery.value(4);
+	QSqlQuery *qry = new QSqlQuery;
+	qry->prepare("SELECT * FROM reader_rent ORDER BY due_date DESC");
+	qry->exec();
 
-				QString user_id = rquery.value(0).toString();
-				QString borrow_book = rquery.value(1).toString();
-				QString isbn = rquery.value(2).toString();
-				QString borrow_date = rquery.value(3).toString();
-				QString due_date = rquery.value(4).toString();
+	QSqlQueryModel * modal = new QSqlQueryModel;
+	modal->setQuery(*qry);
 
-				this->borrowTable->setRowCount(this->borrowTable->rowCount() + 1);
+	ui.borrowTable->setModel(modal);
 
-				QTableWidgetItem *user_idItem = new QTableWidgetItem(user_id);
-				QTableWidgetItem *borrow_bookItem = new QTableWidgetItem(borrow_book);
-				QTableWidgetItem *isbnItem = new QTableWidgetItem(isbn);
-				QTableWidgetItem *borrow_dateItem = new QTableWidgetItem(borrow_date);
-				QTableWidgetItem *due_dateItem = new QTableWidgetItem(due_date);
 
-				int row = this->borrowTable->rowCount();
+	ui.borrowTable->resizeColumnToContents(1);
+	ui.borrowTable->setColumnWidth(0, 380);
+	ui.borrowTable->setColumnWidth(1, 165);
+	ui.borrowTable->setColumnWidth(2, 75);
+	ui.borrowTable->setColumnWidth(3, 50);
 
-				this->borrowTable->setItem(row - 1, 0, user_idItem);
-				this->borrowTable->setItem(row - 1, 1, borrow_bookItem);
-				this->borrowTable->setItem(row - 1, 2, isbnItem);
-				this->borrowTable->setItem(row - 1, 3, borrow_dateItem);
-				this->borrowTable->setItem(row - 1, 4, due_dateItem);
-			}
-		}
-	}
-	else
-		qDebug() << rdb.lastError();
+	modal->setHeaderData(1, Qt::Horizontal, QObject::tr("Tên sách"));
+	modal->setHeaderData(2, Qt::Horizontal, QObject::tr("Tác giả"));
+	modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Số lượng"));
+	modal->setHeaderData(6, Qt::Horizontal, QObject::tr("Xếp hạng"));
 
 }
 
-Librarian::~Librarian()
-{
+Librarian::~Librarian(){
 }

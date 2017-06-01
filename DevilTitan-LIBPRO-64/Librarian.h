@@ -1,13 +1,14 @@
 #pragma once
 
-#include <QWidget>
-#include <QtSql>
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QDebug>
-#include <QtableWidget>
-#include <QTableWidgetItem>
 #include "ui_Librarian.h"
+
+#include <QWidget>
+#include <QVector>
+#include <QString>
+#include <QSqlDatabase>
+#include <QStandardItemModel>
+#include <QMap>
+
 
 class Librarian : public QWidget, public Ui::Librarian{
 	Q_OBJECT
@@ -15,6 +16,9 @@ class Librarian : public QWidget, public Ui::Librarian{
 public:
 	Librarian(QWidget *parent = Q_NULLPTR);
 	~Librarian();
+	void displayBook(Ui::Librarian ui);
+
 private:
-	QSqlDatabase rdb;
+	QSqlDatabase *rdb,*vdb;
+	Ui::Librarian ui;
 };
