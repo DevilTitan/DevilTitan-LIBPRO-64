@@ -6,21 +6,69 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>813</width>
+    <width>800</width>
     <height>523</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#removebtn:hover{background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 rgb(173,31,43), stop: 1 rgb(212, 38, 61));
+color: white;}
+#cancelbtn:hover{background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 rgb(229,104,62), stop: 1 rgb(238, 51, 75));
+color: white}
+#borrowBook{
+background-image: url(:/appscreen/Resources/appscreen/2.jpg);}
+#requestbtn:hover{background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 rgb(170,214,171), stop: 1 rgb(50, 181, 92));
+color: white}
+QPushButton {
+border:0px;
+color: #333;
+border: 2px solid #555;
+border-radius: 5px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+background-color: rgba(255, 255, 255, .5);
+font-size: 11pt;
+}
+
+QPushButton:hover {
+border:0px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 rgb(238,226,191), stop: 1 #e5efff);
+}
+
+QPushButton:pressed {
+border:0px;
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+</string>
+  </property>
   <widget class="QPushButton" name="requestbtn">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>410</y>
-     <width>171</width>
-     <height>101</height>
+     <x>410</x>
+     <y>400</y>
+     <width>131</width>
+     <height>71</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+font-family: Roboto;</string>
    </property>
    <property name="text">
     <string>Send Request</string>
@@ -29,11 +77,15 @@
   <widget class="QPushButton" name="cancelbtn">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>470</y>
-     <width>171</width>
-     <height>41</height>
+     <x>560</x>
+     <y>440</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -42,11 +94,15 @@
   <widget class="QPushButton" name="removebtn">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>410</y>
-     <width>171</width>
-     <height>41</height>
+     <x>560</x>
+     <y>400</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+</string>
    </property>
    <property name="text">
     <string>Remove all</string>
@@ -55,40 +111,58 @@
   <widget class="QPushButton" name="increasebtn">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>30</y>
-     <width>93</width>
-     <height>101</height>
+     <x>690</x>
+     <y>40</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+</string>
    </property>
    <property name="text">
     <string>Increase</string>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/plus.png</normaloff>:/icon/Resources/icon/plus.png</iconset>
    </property>
   </widget>
   <widget class="QPushButton" name="decreasebtn">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>160</y>
-     <width>93</width>
-     <height>101</height>
+     <x>690</x>
+     <y>80</y>
+     <width>94</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+</string>
    </property>
    <property name="text">
     <string>Decrease</string>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/minus.png</normaloff>:/icon/Resources/icon/minus.png</iconset>
    </property>
   </widget>
   <widget class="QTableView" name="bookList">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
+     <x>20</x>
+     <y>40</y>
      <width>641</width>
      <height>331</height>
     </rect>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="LIBPRO.qrc"/>
+ </resources>
  <connections/>
 </ui>

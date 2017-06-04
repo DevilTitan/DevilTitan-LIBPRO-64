@@ -4,7 +4,7 @@
 
 # This is a reminder that you are using a generated .pro file.
 # Remove it when you are finished editing this file.
-message("You are running qmake on a generated .pro file. This may not work!")
+
 
 
 HEADERS += ./LIBPRO.h \
@@ -13,7 +13,12 @@ HEADERS += ./LIBPRO.h \
     ./Role.h \
     ./Reader.h \
     ./bookData.h \
-    ./DataProcessingTechnician.h
+    ./DataProcessingTechnician.h \
+    $$PWD/book.h \
+    $$PWD/borrowbook.h \
+    $$PWD/user.h \
+    $$PWD/requestbook.h \
+    $$PWD/switchrole.h
 SOURCES += ./main.cpp \
     ./Administrator.cpp \
     ./bookData.cpp \
@@ -21,11 +26,23 @@ SOURCES += ./main.cpp \
     ./LIBPRO.cpp \
     ./Librarian.cpp \
     ./Reader.cpp \
-    ./Role.cpp
+    ./Role.cpp \
+    $$PWD/borrowbook.cpp \
+    $$PWD/user.cpp \
+    $$PWD/requestbook.cpp \
+    $$PWD/switchrole.cpp
 FORMS += ./LIBPRO.ui \
     ./Librarian.ui \
     ./Administrator.ui \
     ./bookData.ui \
     ./DataProcessingTechnician.ui \
-    ./Reader.ui
+    ./Reader.ui \
+    $$PWD/borrowbook.ui \
+    $$PWD/requestbook.ui \
+    $$PWD/switchrole.ui
 RESOURCES += LIBPRO.qrc
+
+DISTFILES += \
+    $$PWD/Resources/icon/chat.png \
+    $$PWD/Resources/icon/chatting.png \
+    $$PWD/Resources/icon/chatting.png
