@@ -1,6 +1,0 @@
-﻿  Uic'ing Reader.ui...
-  moc_Reader.cpp
-  Reader.cpp
-Reader.cpp(9): error C2039: 'setPixMap': is not a member of 'QLabel'
-  c:\qt\5.8\msvc2015_64\include\qtwidgets\qlabel.h(51): note: see declaration of 'QLabel'
-  Generating Code...
