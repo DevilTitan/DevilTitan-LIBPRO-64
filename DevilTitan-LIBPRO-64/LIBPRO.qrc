@@ -1,55 +1,37 @@
 <RCC>
-    <qresource prefix="/LIBPRO"/>
-    <qresource prefix="/appscreen">
-        <file>Resources/appscreen/LIBPRO-symbol.png</file>
-        <file>Resources/appscreen/login-background.png</file>
-        <file>Resources/appscreen/1.jpg</file>
-        <file>Resources/appscreen/1.png</file>
-        <file>Resources/appscreen/form.jpg</file>
-        <file>Resources/appscreen/2.png</file>
-        <file>Resources/appscreen/qb4Ddyc.jpg</file>
-        <file>Resources/appscreen/2.jpg</file>
-        <file>Resources/appscreen/3.png</file>
-        <file>Resources/appscreen/3.jpg</file>
-    </qresource>
-    <qresource prefix="/icon">
-        <file>Resources/icon/administrator.png</file>
-        <file>Resources/icon/dataProcessor.png</file>
-        <file>Resources/icon/LIBPRO-icon.png</file>
-        <file>Resources/icon/window-icon.png</file>
-        <file>Resources/icon/reader.png</file>
-        <file>Resources/icon/librarian.png</file>
-        <file>Resources/icon/a.png</file>
-        <file>Resources/icon/shopping-basket.png</file>
-        <file>Resources/icon/school-bell.png</file>
-        <file>Resources/icon/notification.png</file>
-        <file>Resources/icon/chat.png</file>
-        <file>Resources/icon/paper-plane.png</file>
-        <file>Resources/icon/speech-bubble.png</file>
-        <file>Resources/icon/logout.png</file>
-        <file>Resources/icon/unchecked.png</file>
-        <file>Resources/icon/checked.png</file>
-        <file>Resources/icon/books.png</file>
-        <file>Resources/icon/user.png</file>
-        <file>Resources/icon/man.png</file>
-        <file>Resources/icon/book.png</file>
-        <file>Resources/icon/20170301_58b63a30bf6d4.png</file>
-        <file>Resources/icon/profits.png</file>
-        <file>Resources/icon/chatting.png</file>
-        <file>Resources/icon/minus.png</file>
-        <file>Resources/icon/plus.png</file>
-    </qresource>
-    <qresource prefix="/barIcon">
-        <file>Resources/icon/001-sharing.png</file>
-        <file>Resources/icon/002-worldwide.png</file>
-        <file>Resources/icon/003-user.png</file>
-        <file>Resources/icon/004-search.png</file>
-        <file>Resources/icon/add.png</file>
-        <file>Resources/icon/list.png</file>
-        <file>Resources/icon/bookshelf.png</file>
-        <file>Resources/icon/envelope.png</file>
-        <file>Resources/icon/file.png</file>
-        <file>Resources/icon/shuffle.png</file>
-        <file>Resources/icon/user (1).png</file>
-    </qresource>
+  <qresource prefix="/LIBPRO"/>
+  <qresource prefix="/appscreen">
+    <file>Resources/appscreen/administrator-background.png</file>
+    <file>Resources/appscreen/librarian-background.jpg</file>
+    <file>Resources/appscreen/LIBPRO-symbol.png</file>
+    <file>Resources/appscreen/login-background.png</file>
+    <file>Resources/appscreen/background.png</file>
+  </qresource>
+  <qresource prefix="/icon">
+    <file>Resources/icon/001-sharing.png</file>
+    <file>Resources/icon/002-worldwide.png</file>
+    <file>Resources/icon/004-search.png</file>
+    <file>Resources/icon/a.png</file>
+    <file>Resources/icon/add.png</file>
+    <file>Resources/icon/Add.svg</file>
+    <file>Resources/icon/administrator.png</file>
+    <file>Resources/icon/book.jpg</file>
+    <file>Resources/icon/bookshelf.png</file>
+    <file>Resources/icon/BorrowList.png</file>
+    <file>Resources/icon/chat.png</file>
+    <file>Resources/icon/dataProcessor.png</file>
+    <file>Resources/icon/envelope.png</file>
+    <file>Resources/icon/file.png</file>
+    <file>Resources/icon/LIBPRO-icon.png</file>
+    <file>Resources/icon/LIBPRO-icon-white.png</file>
+    <file>Resources/icon/librarian.png</file>
+    <file>Resources/icon/list.png</file>
+    <file>Resources/icon/notification.png</file>
+    <file>Resources/icon/reader.png</file>
+    <file>Resources/icon/Request.svg</file>
+    <file>Resources/icon/school-bell.png</file>
+    <file>Resources/icon/shopping-basket.png</file>
+    <file>Resources/icon/shuffle.png</file>
+    <file>Resources/icon/user.png</file>
+  </qresource>
 </RCC>
