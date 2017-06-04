@@ -1,4 +1,0 @@
-#ifndef GENERALFUNC_H
-#define GENERALFUNC_H
-
-#endif // GENERALFUNC_H
