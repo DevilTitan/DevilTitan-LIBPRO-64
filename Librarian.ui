@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1126</width>
-    <height>574</height>
+    <height>704</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">#Librarian{
-background-image: url(:/appscreen/Resources/appscreen/librarian-background.jpg);
+
+background-image: url(:/appscreen/Resources/appscreen/2.jpg);
+
 }
 QLabel{
 font: 9pt &quot;Segoe UI&quot;;
@@ -32,57 +34,138 @@ background-color:  rgba(85, 170, 0, 0.3);
 }
 QLineEdit{
 border-radius: 2px;
+}
+
+QPushButton {
+	
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+background-color: rgba(255,255,255, .5);
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
 }</string>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>120</y>
+     <y>90</y>
      <width>1071</width>
-     <height>441</height>
+     <height>591</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#tabWidget{
-	background-color: rgba(85, 170, 0, 0.5);
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 0px;background-color: rgba(255, 255, 255, .4);border-color:rgba(255, 255, 255, .5);
+
+}
+#violation
+{
+
+	border-radius:5px;
+	border-top-left-radius:0px;
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 12px;background-color: rgba(255, 255, 255, .4);border-color:rgba(255, 255, 255, .3);
+border-top-left-radius:0px;
 }
 #ReaderRent{
-	background-color:  rgba(85, 170, 0, 0.5);
-	border-radius:2px;
+
+	border-radius:5px;
+	border-top-left-radius:0px;
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 12px;background-color: rgba(255, 255, 255, .4);border-color:rgba(255, 255, 255, .3);
+border-top-left-radius:0px;
 }
-#violation{
-	background-color:  rgba(85, 170, 0, 0.5);
-	border-radius:2px;
+#tab{
+	border-radius:5px;
+	border-top-left-radius:0px;
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 12px;background-color: rgba(255, 255, 255, .4);border-color:rgba(255, 255, 255, .3);
+border-top-left-radius:0px;
 }
 QTabBar::tab{
 font: 9pt &quot;Segoe UI&quot;;
 color:white;
 width: 200px;
-background-color: rgba(85, 170, 0, 0.2);  
+height:55px;
+
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 0px;background-color: rgba(66, 134, 244, .4);border-color:rgba(255, 255, 255, .5)
 }
 QTabBar::tab:selected{
 font: 9pt &quot;Segoe UI&quot;;
 color:white;
 width: 200px;
-background-color:  rgba(85, 170, 0, 0.5);
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 0px;background-color: rgba(255, 255, 255, .4);border-color:rgba(255, 255, 255, .5)
+}
+
+QPushButton {
+	
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+background-color: rgba(255,255,255, .5);
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
 }
 </string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="ReaderRent">
+    <property name="styleSheet">
+     <string notr="true">#tabWidget{border-radius:0px;}</string>
+    </property>
     <attribute name="title">
-     <string>Rental list</string>
+     <string>Request for Renting</string>
     </attribute>
     <widget class="QTableView" name="borrowTable">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>1051</width>
-       <height>331</height>
+       <x>30</x>
+       <y>90</y>
+       <width>1011</width>
+       <height>411</height>
       </rect>
      </property>
      <property name="sizePolicy">
@@ -95,140 +178,191 @@ background-color:  rgba(85, 170, 0, 0.5);
       <number>200</number>
      </attribute>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QPushButton" name="insertButton">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>10</y>
+       <width>94</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/checked.png</normaloff>:/icon/Resources/icon/checked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="searchButton">
+     <property name="geometry">
+      <rect>
+       <x>949</x>
+       <y>9</y>
+       <width>94</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/unchecked.png</normaloff>:/icon/Resources/icon/unchecked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>10</y>
-       <width>1011</width>
-       <height>51</height>
+       <width>75</width>
+       <height>20</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Reader's ID</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="readerIDLe"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>ISBN</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="isbnLe"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Due date</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="dueDateLe"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>Borrow date</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="borrowDateLe"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
-        <item>
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="insertButton">
-          <property name="styleSheet">
-           <string notr="true">#insertButton{
-background-color: rgba(255, 255, 255,0.6);
-}
-#insertButton:pressed{
-background-color: rgba(255, 255, 255,1);
-}</string>
-          </property>
-          <property name="text">
-           <string>Insert</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_11">
-        <item>
-         <spacer name="verticalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="searchButton">
-          <property name="styleSheet">
-           <string notr="true">#searchButton{
-background-color: rgba(255, 255, 255,0.6);
-}
-#searchButton:pressed{
-background-color: rgba(255, 255, 255,1);
-}</string>
-          </property>
-          <property name="text">
-           <string>Search</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Reader's ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="readerIDLe">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>39</y>
+       <width>781</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Waiting...</string>
+    </attribute>
+    <widget class="QTableView" name="waitTable">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>1011</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>200</number>
+     </attribute>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="insertButton_3">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>10</y>
+       <width>94</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/checked.png</normaloff>:/icon/Resources/icon/checked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="searchButton_3">
+     <property name="geometry">
+      <rect>
+       <x>949</x>
+       <y>9</y>
+       <width>94</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/unchecked.png</normaloff>:/icon/Resources/icon/unchecked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="readerIDLe_3">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>39</y>
+       <width>781</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="violation">
@@ -238,261 +372,391 @@ background-color: rgba(255, 255, 255,1);
     <widget class="QTableView" name="violationTable">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>1051</width>
-       <height>311</height>
+       <x>30</x>
+       <y>90</y>
+       <width>1011</width>
+       <height>421</height>
       </rect>
      </property>
      <attribute name="horizontalHeaderMinimumSectionSize">
       <number>300</number>
      </attribute>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QPushButton" name="searchButton_4">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>950</x>
        <y>10</y>
-       <width>1001</width>
-       <height>49</height>
+       <width>94</width>
+       <height>61</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_5">
-        <item>
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>Reader's ID</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="readerIDLe_2"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
-        <item>
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>Violation</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="violationLe"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
-        <property name="spacing">
-         <number>6</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="label_7">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Date of infringement(yyyy/mm/dd)</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLineEdit" name="yearLe">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_8">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>10</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>10</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="monthLe">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_9">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>10</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>10</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>/</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="dayLe">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
-        <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>72</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="insertButton_2">
-          <property name="styleSheet">
-           <string notr="true">#insertButton_2{
-background-color: rgba(255, 255, 255,0.6);
-}
-#insertButton_2:pressed{
-background-color: rgba(255, 255, 255,1);
-}</string>
-          </property>
-          <property name="text">
-           <string>Insert</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_9">
-        <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>13</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="searchButton_2">
-          <property name="styleSheet">
-           <string notr="true">#searchButton_2{
-background-color: rgba(255, 255, 255,0.6);
-}
-#searchButton_2:pressed{
-background-color: rgba(255, 255, 255,1);
-}</string>
-          </property>
-          <property name="text">
-           <string>Search</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/unchecked.png</normaloff>:/icon/Resources/icon/unchecked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="insertButton_4">
+     <property name="geometry">
+      <rect>
+       <x>841</x>
+       <y>11</y>
+       <width>94</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/checked.png</normaloff>:/icon/Resources/icon/checked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>12</y>
+       <width>233</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Date (yyyy/mm/dd)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>311</x>
+       <y>12</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Violation</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="violationLe">
+     <property name="geometry">
+      <rect>
+       <x>311</x>
+       <y>39</y>
+       <width>251</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>12</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reader's ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="readerIDLe_2">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>39</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="yearLe">
+     <property name="geometry">
+      <rect>
+       <x>591</x>
+       <y>40</y>
+       <width>50</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>648</x>
+       <y>39</y>
+       <width>10</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>10</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>10</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>/</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="monthLe">
+     <property name="geometry">
+      <rect>
+       <x>665</x>
+       <y>40</y>
+       <width>50</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>722</x>
+       <y>39</y>
+       <width>10</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>10</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>10</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>/</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dayLe">
+     <property name="geometry">
+      <rect>
+       <x>739</x>
+       <y>40</y>
+       <width>50</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
     </widget>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="logout">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>10</y>
+     <width>90</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Log out
+</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+border-radius:7px;
+border-top-left-radius:0;
+border-bottom-left-radius:0;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/logout.png</normaloff>:/icon/Resources/icon/logout.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>60</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publicChat_3">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>10</y>
+     <width>90</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Renting book</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+border-radius:0;
+border-left:10;
+border-color:white</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/barIcon/Resources/icon/shuffle.png</normaloff>:/barIcon/Resources/icon/shuffle.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publicChat_2">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>10</y>
+     <width>90</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Account statistic</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+border-radius:7px;
+border-top-right-radius:0;
+border-bottom-right-radius:0;
+border-left:10;
+border-color:white</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/notification.png</normaloff>:/icon/Resources/icon/notification.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

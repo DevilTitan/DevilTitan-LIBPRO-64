@@ -11,7 +11,11 @@
 #include <algorithm>
 #include <string>
 #include <QtAlgorithms>
+#include "book.h"
 #include <algorithm>
+#include <QStandardItemModel>
+#include "borrowbook.h"
+#include <QTableView>
 #include <QStandardItemModel>
 #include <QSet>
 
@@ -19,47 +23,91 @@ Librarian::Librarian(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	displayBook(ui);
-	QPixmap bkgnd(":/appscreen/Resources/appscreen/1.png");
-	bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-	QPalette palette;
-	palette.setBrush(QPalette::Background, bkgnd);
-	this->setPalette(palette);
+    displayBook();
+    QPixmap bkgnd(":/appscreen/Resources/appscreen/2.jpg");
+    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, bkgnd);
+    this->setPalette(palette);
+
+
 }
 
-void displayBook(Ui::Librarian ui)
+void Librarian::displayBook()
 
 {
-	QSqlDatabase rdb;
-	rdb = QSqlDatabase::addDatabase("QMYSQL");
-	rdb.setHostName("127.0.0.1");
-	rdb.setUserName("DevilTitan");
-	rdb.setPassword("DevilTitan");
-	rdb.setDatabaseName("libpro_user");
-	rdb.open();
+    QSqlQuery *qry = new QSqlQuery(QSqlDatabase::database("libpro_user")) ;
+      qry->prepare("select * from book_request");
+      qry->exec();
 
-	QSqlQuery *qry = new QSqlQuery;
-	qry->prepare("SELECT * FROM reader_rent ORDER BY due_date DESC");
-	qry->exec();
+      QSqlQueryModel * modal = new QSqlQueryModel;
+      modal ->setQuery(*qry);
 
-	QSqlQueryModel * modal = new QSqlQueryModel;
-	modal->setQuery(*qry);
+      ui.borrowTable->setModel(modal);
 
-	ui.borrowTable->setModel(modal);
+      ui.borrowTable->setColumnWidth(2,300);
+      ui.borrowTable->setColumnWidth(5,150);
 
 
-	ui.borrowTable->resizeColumnToContents(1);
-	ui.borrowTable->setColumnWidth(0, 380);
-	ui.borrowTable->setColumnWidth(1, 165);
-	ui.borrowTable->setColumnWidth(2, 75);
-	ui.borrowTable->setColumnWidth(3, 50);
+      modal->setHeaderData(0, Qt::Horizontal, QObject::tr("Username"));
+      modal->setHeaderData(1, Qt::Horizontal, QObject::tr("Number"));
+      modal->setHeaderData(2, Qt::Horizontal, QObject::tr("Book Name"));
+      modal->setHeaderData(3, Qt::Horizontal, QObject::tr("Author"));
+      modal->setHeaderData(4, Qt::Horizontal, QObject::tr("Publisher"));
+      modal->setHeaderData(5, Qt::Horizontal, QObject:: tr("Date of request"));
 
-	modal->setHeaderData(1, Qt::Horizontal, QObject::tr("Tên sách"));
-	modal->setHeaderData(2, Qt::Horizontal, QObject::tr("Tác giả"));
-	modal->setHeaderData(5, Qt::Horizontal, QObject::tr("Số lượng"));
-	modal->setHeaderData(6, Qt::Horizontal, QObject::tr("Xếp hạng"));
+
+
+
 
 }
 
 Librarian::~Librarian(){
+}
+
+void Librarian::on_borrowTable_clicked(const QModelIndex &index)
+{
+      const QAbstractItemModel * model = index.model();
+      curBookRequestIndex = model->data(model->index(index.row(),7),Qt::DisplayRole).toInt();
+}
+
+void Librarian::on_violationTable_clicked(const QModelIndex &index)
+{
+
+}
+
+
+
+void Librarian::on_waitTable_clicked(const QModelIndex &index)
+{
+    const QAbstractItemModel * model = index.model();
+    curWaitIndex=model->data(model->index(index.row(),7),Qt::DisplayRole).toInt();
+}
+
+void Librarian::on_readerIDLe_textChanged(const QString &cur)
+{
+    QString search; // xóa khoảng trắng liên tiếp
+    for(int i = 1 ; i < cur.size() ; ++i)
+    {
+      if (!((cur[i]==' ')&&(cur[i-1]==' '))) search.append(cur[i]);
+    }
+
+    QSqlQuery *qry = new QSqlQuery (QSqlDatabase::database("libpro_user")) ;
+    qry->prepare("select * from book_request where username like '%" + search + "%'");
+    qry->exec();
+
+    //hiển thị bảng
+    QSqlQueryModel * modal = new QSqlQueryModel;
+    modal ->setQuery(*qry);
+
+    ui.borrowTable->setModel(modal);
+    ui.borrowTable->setColumnWidth(2,300);
+    ui.borrowTable->setColumnWidth(5,150);
+    modal->setHeaderData(0, Qt::Horizontal, QObject::tr("Username"));
+    modal->setHeaderData(1, Qt::Horizontal, QObject::tr("Number"));
+    modal->setHeaderData(2, Qt::Horizontal, QObject::tr("Book Name"));
+    modal->setHeaderData(3, Qt::Horizontal, QObject::tr("Author"));
+    modal->setHeaderData(4, Qt::Horizontal, QObject::tr("Publisher"));
+    modal->setHeaderData(5, Qt::Horizontal, QObject:: tr("Date of request"));
+
 }
