@@ -26,7 +26,8 @@ int main(int argc, char *argv[])
     libpro_user.open();
 
     QApplication a(argc, argv);
-    Reader w(0,new User(QString("Donald Trump")));
-    w.show();
+    Reader w(0,new User(QString("Donald Trump")));\
+    LIBPRO g;
+    g.show();
 	return a.exec();
 }

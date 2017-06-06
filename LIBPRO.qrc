@@ -11,6 +11,7 @@
         <file>Resources/appscreen/2.jpg</file>
         <file>Resources/appscreen/3.png</file>
         <file>Resources/appscreen/3.jpg</file>
+        <file>Resources/appscreen/administrator-background.png</file>
     </qresource>
     <qresource prefix="/icon">
         <file>Resources/icon/administrator.png</file>

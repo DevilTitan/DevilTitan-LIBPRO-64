@@ -22,14 +22,14 @@ border:0;
 }
 QLabel{
 font: 9pt &quot;Segoe UI&quot;;
-color:white;
+color:black;
 }
 QPushButton{
 font: 9pt &quot;Segoe UI&quot;;
 }
 QCheckBox{
 font: 9pt &quot;Segoe UI&quot;;
-color: white;
+color: black;
 }
 QLineEdit{
 border-radius:2px;
@@ -47,25 +47,25 @@ border-radius:2px;
    </property>
    <property name="styleSheet">
     <string notr="true">#user_Information{
-	background-color:  rgba(46, 132, 189,0.6);
+	background-color:  rgba(255, 255, 255,0.6);
 
 	border-radius:2px;
 }
 #account_Information{
-background-color:  rgba(46, 132, 189,0.6);
+background-color:  rgba(255, 255, 255,0.6);
 border-radius:2px;
 }
 QTabBar::tab{
 font: 9pt &quot;Segoe UI&quot;;
 color:white;
 width: 200px;
-background-color:  rgba(46, 132, 189,0.3);
+background-color:  rgba(255, 255, 255,0.3);
 }
 QTabBar::tab:selected{
 font: 9pt &quot;Segoe UI&quot;;
 color:white;
 width: 200px;
-background-color:  rgba(46, 132, 189,0.6);
+background-color:  rgba(255, 255, 255,0.6);
 }
 
 
@@ -537,12 +537,13 @@ background-color: rgba(255, 255, 255,1);
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>1041</width>
+     <width>201</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255, 99, 99,0.4);</string>
+    <string notr="true">background-color: rgba(255, 255, 255,0.4);
+border-radius: 30px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -553,7 +554,7 @@ background-color: rgba(255, 255, 255,1);
    <widget class="QPushButton" name="userButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>20</x>
       <y>10</y>
       <width>41</width>
       <height>41</height>
@@ -572,7 +573,7 @@ background-color: rgba(255,255,255,0);
    <widget class="QPushButton" name="notiButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>80</x>
       <y>10</y>
       <width>41</width>
       <height>41</height>
@@ -588,11 +589,28 @@ background-color: rgba(255,255,255,0);
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="logOutButton">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#logOutButton{
+border-image: url(:/icon/Resources/icon/logout.png);
+background-color: rgba(255,255,255,0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="LIBPRO.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
