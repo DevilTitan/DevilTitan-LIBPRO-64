@@ -6,6 +6,7 @@ TEMPLATE = app
 TARGET = DevilTitan-LIBPRO-64
 DESTDIR = ../x64/Debug
 QT += core uitools widgets gui sql
+CONFIG += resources_big
 
 DEFINES += WIN64 QT_DLL QT_SQL_LIB QT_UITOOLS_LIB QT_WIDGETS_LIB
 INCLUDEPATH += ./GeneratedFiles \
@@ -20,12 +21,15 @@ include(DevilTitan-LIBPRO-64.pri)
 
 FORMS += \
     borrowbook.ui \
-    aftersendingrequest.ui
+    aftersendingrequest.ui \
+    loginform.ui
 
 HEADERS += \
     borrowbook.h \
-    aftersendingrequest.h
+    aftersendingrequest.h \
+    loginform.h
 
 SOURCES += \
     borrowbook.cpp \
-    aftersendingrequest.cpp
+    aftersendingrequest.cpp \
+    loginform.cpp
