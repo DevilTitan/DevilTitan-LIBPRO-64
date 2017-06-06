@@ -13,7 +13,11 @@ HEADERS += ./LIBPRO.h \
     ./Role.h \
     ./Reader.h \
     ./bookData.h \
-    ./DataProcessingTechnician.h
+    ./DataProcessingTechnician.h \
+    $$PWD/book.h \
+    $$PWD/borrowbook.h \
+    $$PWD/user.h \
+    $$PWD/requestbook.h
 SOURCES += ./main.cpp \
     ./Administrator.cpp \
     ./bookData.cpp \
@@ -21,11 +25,16 @@ SOURCES += ./main.cpp \
     ./LIBPRO.cpp \
     ./Librarian.cpp \
     ./Reader.cpp \
-    ./Role.cpp
+    ./Role.cpp \
+    $$PWD/borrowbook.cpp \
+    $$PWD/user.cpp \
+    $$PWD/requestbook.cpp
 FORMS += ./LIBPRO.ui \
     ./Librarian.ui \
     ./Administrator.ui \
     ./bookData.ui \
     ./DataProcessingTechnician.ui \
-    ./Reader.ui
+    ./Reader.ui \
+    $$PWD/borrowbook.ui \
+    $$PWD/requestbook.ui
 RESOURCES += LIBPRO.qrc
