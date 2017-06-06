@@ -7,57 +7,121 @@
     <x>0</x>
     <y>0</y>
     <width>973</width>
-    <height>600</height>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>DataProcessingTechnician</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QTabWidget::pane{
+
+border-radius:2px;
+}
+QLabel{
+font: 9pt &quot;Segoe UI&quot;;
+
+}
+QPushButton{
+font: 9pt &quot;Segoe UI&quot;;
+	
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+background-color: rgba(255,255,255, .5);
+
+}
+QCheckBox{
+font: 9pt &quot;Segoe UI&quot;;
+
+}
+
+#DataProcessingTechnician{
+background-image: url(:/appscreen/D:/TLBK/ASSIGNMENT 2 TITAN/image/aqua-blue-gradient-background.jpg);
+}</string>
+  </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1171</width>
-     <height>641</height>
+     <x>10</x>
+     <y>40</y>
+     <width>951</width>
+     <height>411</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#request_list{
+	background-color:  rgba(255, 255, 255,0.6);
+
+	border-radius:2px;
+}
+#book_managerment{
+background-color:  rgba(255, 255, 255,0.6);
+border-radius:2px;
+}
+QTabBar::tab{
+font: 9pt &quot;Segoe UI&quot;;
+color:black;
+width: 200px;
+background-color:  rgba(255, 255, 255,0.6);
+}
+QTabBar::tab:selected{
+font: 9pt &quot;Segoe UI&quot;;
+color:black;
+width: 200px;
+background-color: rgba(255, 255, 255,0.6);
+}
+</string>
    </property>
    <property name="currentIndex">
     <number>1</number>
    </property>
-   <widget class="QWidget" name="tab">
+   <widget class="QWidget" name="request_list">
     <attribute name="title">
      <string>Request List</string>
     </attribute>
     <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>110</y>
-       <width>881</width>
-       <height>411</height>
+       <x>30</x>
+       <y>100</y>
+       <width>891</width>
+       <height>271</height>
       </rect>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>740</x>
+       <x>720</x>
        <y>60</y>
-       <width>181</width>
+       <width>201</width>
        <height>41</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="add">
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(74, 164, 203);
+color:rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Add</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="delete_2">
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(74, 164, 203);
+color:rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Delete</string>
         </property>
@@ -68,101 +132,101 @@
     <widget class="QWidget" name="layoutWidget_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>30</x>
        <y>10</y>
-       <width>881</width>
-       <height>43</height>
+       <width>891</width>
+       <height>45</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="user_id">
           <property name="text">
            <string>user_id</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="user_id_line"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="no_of_request">
           <property name="text">
            <string>no_of_request</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="no_of_request_line"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="book_request">
           <property name="text">
            <string>book_request</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_3"/>
+         <widget class="QLineEdit" name="book_request_line"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="author">
           <property name="text">
            <string>author</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_6"/>
+         <widget class="QLineEdit" name="author_line"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="publisher">
           <property name="text">
            <string>publisher</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QLineEdit" name="publisher_line"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="day_of_arrival">
           <property name="text">
            <string>day_of_arrival</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_5"/>
+         <widget class="QLineEdit" name="day_of_arrival_line"/>
         </item>
        </layout>
       </item>
      </layout>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="book_managerment">
     <attribute name="title">
      <string>Book Management </string>
     </attribute>
@@ -170,33 +234,38 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>130</y>
-       <width>881</width>
-       <height>411</height>
+       <y>120</y>
+       <width>891</width>
+       <height>251</height>
       </rect>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>30</x>
        <y>20</y>
-       <width>911</width>
-       <height>43</height>
+       <width>891</width>
+       <height>45</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>
-         <widget class="QLabel" name="label_7">
+         <widget class="QLabel" name="isbn">
           <property name="text">
            <string>isbn</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_7"/>
+         <widget class="QLineEdit" name="isbn_line">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -210,7 +279,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_8"/>
+         <widget class="QLineEdit" name="lineEdit_8">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -224,7 +298,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_9"/>
+         <widget class="QLineEdit" name="lineEdit_9">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -238,7 +317,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_10"/>
+         <widget class="QLineEdit" name="lineEdit_10">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -252,7 +336,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_13"/>
+         <widget class="QLineEdit" name="lineEdit_13">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -266,7 +355,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_11"/>
+         <widget class="QLineEdit" name="lineEdit_11">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -280,7 +374,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_14"/>
+         <widget class="QLineEdit" name="lineEdit_14">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -294,7 +393,12 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_12"/>
+         <widget class="QLineEdit" name="lineEdit_12">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -308,24 +412,33 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_15"/>
+         <widget class="QLineEdit" name="lineEdit_15">
+          <property name="styleSheet">
+           <string notr="true">background:white;
+border-radius: 7px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>760</x>
-       <y>80</y>
-       <width>158</width>
-       <height>25</height>
+       <x>720</x>
+       <y>70</y>
+       <width>201</width>
+       <height>31</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QPushButton" name="pushButton_3">
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(74, 164, 203);
+color:rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Add</string>
         </property>
@@ -333,6 +446,10 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_4">
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(74, 164, 203);
+color:rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Delete</string>
         </property>

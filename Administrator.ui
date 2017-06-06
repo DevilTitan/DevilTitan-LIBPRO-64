@@ -72,7 +72,7 @@ background-color:  rgba(46, 132, 189,0.6);
 </string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="user_Information">
     <attribute name="title">
@@ -509,6 +509,9 @@ background-color: rgba(255, 255, 255,1);
           </item>
           <item>
            <widget class="QPushButton" name="insertButton_2">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="text">
              <string>Insert</string>
             </property>
@@ -591,8 +594,6 @@ background-color: rgba(255,255,255,0);
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="LIBPRO.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
