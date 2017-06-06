@@ -8,6 +8,4 @@ DataProcessingTechnician::DataProcessingTechnician(QWidget *parent)
 
 DataProcessingTechnician::~DataProcessingTechnician()
 {
-
-
 }
