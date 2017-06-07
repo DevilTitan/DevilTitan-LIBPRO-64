@@ -43,7 +43,7 @@ void Librarian::displayBook()
       QSqlQueryModel * modal = new QSqlQueryModel;
       modal ->setQuery(*qry);
 
-      ui.borrowTable->setModel(modal);
+      //ui.borrowTable->setModel(modal);
 
       ui.borrowTable->setColumnWidth(2,300);
       ui.borrowTable->setColumnWidth(5,150);
@@ -100,7 +100,7 @@ void Librarian::on_readerIDLe_textChanged(const QString &cur)
     QSqlQueryModel * modal = new QSqlQueryModel;
     modal ->setQuery(*qry);
 
-    ui.borrowTable->setModel(modal);
+    //ui.borrowTable->setModel(modal);
     ui.borrowTable->setColumnWidth(2,300);
     ui.borrowTable->setColumnWidth(5,150);
     modal->setHeaderData(0, Qt::Horizontal, QObject::tr("Username"));

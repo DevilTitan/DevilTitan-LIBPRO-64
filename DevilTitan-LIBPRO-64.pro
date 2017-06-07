@@ -22,14 +22,11 @@ include(DevilTitan-LIBPRO-64.pri)
 FORMS += \
     borrowbook.ui \
     aftersendingrequest.ui \
-    loginform.ui
 
 HEADERS += \
     borrowbook.h \
     aftersendingrequest.h \
-    loginform.h
 
 SOURCES += \
     borrowbook.cpp \
     aftersendingrequest.cpp \
-    loginform.cpp

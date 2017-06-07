@@ -42,7 +42,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Please check your notification regularly to get furthur information!</string>
+    <string>Please check your notification regularly to get further information!</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
