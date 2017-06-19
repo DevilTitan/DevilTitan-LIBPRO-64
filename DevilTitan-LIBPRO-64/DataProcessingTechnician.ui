@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataProcessingTechnician</class>
+ <widget class="QWidget" name="DataProcessingTechnician">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1307</width>
+    <height>794</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DataProcessingTechnician</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTabWidget::pane{
+
+border-radius:7px;
+}
+QLabel{
+font: 9pt &quot;Segoe UI&quot;;
+
+}
+
+QCheckBox{
+font: 9pt &quot;Segoe UI&quot;;
+
+}
+
+#DataProcessingTechnician{
+background-image: url(:/appscreen/Resources/appscreen/dataproscr.jpg);
+}
+#add:hover{
+background: qradialgradient(cx: 0.3, cy: -0.4,fx: 0.3, fy: -0.4,radius: 1.35,stop: 0 rgb(238,226,191), stop: 1 #e5efff);
+border-radius: 7px;
+}
+#notipro:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 rgb(0,0,0), stop: 1 #e5efff);
+border-radius: 7px;
+}
+
+QTableWidget:item
+
+{
+color:rgb(53, 54, 56);
+padding:5px;
+margin:15px;
+margin-left:0px;
+font-size:12px;
+
+font-family:&quot;Open Sans&quot;;
+border:0px;
+
+}
+
+QTableWidget::item:selected
+{
+background-color:red;
+}</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>1251</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#tabWidget{
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 0px;background-color: rgba(255, 255, 255, .4)
+;border-color:rgba(255, 255, 255, .5);
+
+}
+
+#request{
+
+	border-radius:5px;
+	border-top-left-radius:0px;
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 12px;background-color: rgba(255, 255, 255, .1);border-color:rgba(255, 255, 255, .3);
+border-top-left-radius:0px;
+}
+#book{
+	border-radius:5px;
+	border-top-left-radius:0px;
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 12px;background-color: rgba(255, 255, 255, .1);border-color:rgba(255, 255, 255, .3);
+border-top-left-radius:0px;
+}
+QTabBar::tab{
+font: 9pt &quot;Segoe UI&quot;;
+color:white;
+width: 200px;
+height:60px;
+
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 0px;background-color: rgba(66, 134, 244, .2);border-color:rgba(255, 255, 255, .5)
+}
+QTabBar::tab:selected{
+font: 9pt &quot;Segoe UI&quot;;
+color:white;
+width: 200px;
+border: 1px solid black;
+	font: 10pt &quot;Segoe UI&quot;;
+border-radius: 0px;background-color: rgba(255, 255, 255, .4);border-color:rgba(255, 255, 255, .5)
+}
+
+QPushButton {
+	
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+background-color: rgba(255,255,255, .5);
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+QLineEdit
+{
+border-radius:5px;
+}
+QLabel{
+color:white;}
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="request">
+    <attribute name="title">
+     <string>request</string>
+    </attribute>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="searchButton_3">
+     <property name="geometry">
+      <rect>
+       <x>1130</x>
+       <y>560</y>
+       <width>90</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/unchecked.png</normaloff>:/icon/Resources/icon/unchecked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="readerIDLe_3">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>39</y>
+       <width>311</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.4);
+border-radius:5px;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="book_name">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>40</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.4);
+border-radius:5px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>10</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Book name</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="requestTable">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>1191</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0;
+	font: 10pt &quot;Segoe UI&quot;;
+font-weight:600;
+border-radius: 5px;background-color: rgba(255, 255, 255, .4);alternate-background-color:rgba(159, 173, 201,0.2);selection-background-color:red;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="book">
+    <property name="styleSheet">
+     <string notr="true">#tabWidget{border-radius:0px;}</string>
+    </property>
+    <attribute name="title">
+     <string>book</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>10</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>ISBN:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="isbnsearch">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>39</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="booknamesearch">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>40</y>
+       <width>401</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Book Name:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="year">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>260</y>
+       <width>81</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>70</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>ISBN</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="insertButton">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>550</y>
+       <width>90</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/checked.png</normaloff>:/icon/Resources/icon/checked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="isbn">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>100</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rated_times">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>350</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="searchButton">
+     <property name="geometry">
+      <rect>
+       <x>1140</x>
+       <y>550</y>
+       <width>90</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/unchecked.png</normaloff>:/icon/Resources/icon/unchecked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>80</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>Author</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="quantity">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>260</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rate">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>350</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>240</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>Year</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="author">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>100</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>320</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>Rate</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_41">
+     <property name="geometry">
+      <rect>
+       <x>764</x>
+       <y>320</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>Rated times</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>622</x>
+       <y>160</y>
+       <width>391</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent
+</string>
+     </property>
+     <property name="text">
+      <string>Book Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>240</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string> Number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="book_name_2">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>180</y>
+       <width>351</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="publisher">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>260</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>854</x>
+       <y>240</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>Publisher</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="physics">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>510</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>Physics</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="general">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>430</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>General</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="programing">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>430</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>Programing</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chemistry">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>430</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>Chemistry</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="electronic">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>470</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>Electronic</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="technology">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>470</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>Technology</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="environment">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>470</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+color:white;
+font-family:&quot;Roboto&quot;;
+border:0px;</string>
+     </property>
+     <property name="text">
+      <string>Environment</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>970</x>
+       <y>80</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>  Description</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="description">
+     <property name="geometry">
+      <rect>
+       <x>970</x>
+       <y>100</y>
+       <width>261</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255,255,255,0.5);
+font-family:Roboto;
+font-size:14px;
+padding-left: 8;
+color:rgb(55,55,55);
+</string>
+     </property>
+     <property name="maxLength">
+      <number>600</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="bookTable">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>551</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0;
+	font: 10pt &quot;Segoe UI&quot;;
+font-weight:600;
+border-radius: 5px;background-color: rgba(255, 255, 255, .4);alternate-background-color:rgba(159, 173, 201,0.2);selection-background-color:red;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="insertButton_2">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>550</y>
+       <width>90</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px;</string>
+     </property>
+     <property name="text">
+      <string>clear</string>
+     </property>
+     <property name="icon">
+      <iconset resource="LIBPRO.qrc">
+       <normaloff>:/icon/Resources/icon/checked.png</normaloff>:/icon/Resources/icon/checked.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>readerIDLe_3</tabstop>
+  <tabstop>book_name</tabstop>
+  <tabstop>requestTable</tabstop>
+  <tabstop>searchButton_3</tabstop>
+  <tabstop>isbnsearch</tabstop>
+  <tabstop>booknamesearch</tabstop>
+  <tabstop>isbn</tabstop>
+  <tabstop>author</tabstop>
+  <tabstop>book_name_2</tabstop>
+  <tabstop>quantity</tabstop>
+  <tabstop>year</tabstop>
+  <tabstop>publisher</tabstop>
+  <tabstop>rate</tabstop>
+  <tabstop>rated_times</tabstop>
+  <tabstop>general</tabstop>
+  <tabstop>programing</tabstop>
+  <tabstop>chemistry</tabstop>
+  <tabstop>environment</tabstop>
+  <tabstop>electronic</tabstop>
+  <tabstop>technology</tabstop>
+  <tabstop>physics</tabstop>
+  <tabstop>description</tabstop>
+  <tabstop>insertButton</tabstop>
+  <tabstop>insertButton_2</tabstop>
+  <tabstop>searchButton</tabstop>
+  <tabstop>bookTable</tabstop>
+ </tabstops>
+ <resources>
+  <include location="LIBPRO.qrc"/>
+ </resources>
+ <connections/>
+</ui>

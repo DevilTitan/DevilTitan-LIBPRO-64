@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChangeTheme</class>
+ <widget class="QDialog" name="ChangeTheme">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1086</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton:hover{ background-color: rgba(0, 189, 155, 1);}
+QPushButton
+{
+font: 25 11pt &quot;Ubuntu Light&quot;;
+color: white;
+background-color: rgba(46, 150, 223, 0.8);
+border-radius: 24px;
+}
+#theme2::indicator {
+    width: 350px;
+    height: 600px;
+border-radius:5px;
+}
+
+#theme2::indicator::unchecked {
+image: url(:/appscreen/Resources/appscreen/2c.jpg);
+}
+#theme2::indicator:unchecked:hover {
+image: url(:/appscreen/Resources/appscreen/2b.jpg);
+}
+
+#theme2::indicator::checked {
+image: url(:/appscreen/Resources/appscreen/2b.jpg);
+}
+
+#theme3::indicator {
+    width: 350px;
+    height: 600px;
+}
+
+#theme3::indicator::unchecked {
+image: url(:/appscreen/Resources/appscreen/3c.jpg);
+}
+#theme3::indicator:unchecked:hover {
+image: url(:/appscreen/Resources/appscreen/3b.jpg);
+}
+#theme3::indicator::checked {
+image: url(:/appscreen/Resources/appscreen/3b.jpg);
+}
+
+#theme4::indicator {
+    width: 350px;
+    height: 600px;
+}
+
+#theme4::indicator::unchecked {
+image: url(:/appscreen/Resources/appscreen/4c.jpg);
+}
+#theme4::indicator:unchecked:hover {
+image: url(:/appscreen/Resources/appscreen/4b.jpg);
+}
+#theme4::indicator::checked {
+image: url(:/appscreen/Resources/appscreen/4b.jpg);
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="change">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>690</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>CHANGE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>690</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>CANCEL</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>1001</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame
+{
+background-color:rgba(255,255,255,0.2);
+border-radius:5px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QRadioButton" name="theme4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>40</y>
+      <width>281</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="theme2">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>40</y>
+      <width>281</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="theme3">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>281</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Rating</class>
+ <widget class="QDialog" name="Rating">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableWidget:item
+
+{
+
+padding:5px;
+margin:15px;
+margin-left:0px;
+font-size:12px;
+font-weight:700;
+font-family:&quot;Open Sans&quot;;
+border:0px;
+color:white;
+}
+QTableWidget
+{
+alternate-background-color: rgba(255,255,255,0.1);
+selection-background-color : white;
+}
+
+QPushButton {	
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+background-color: rgba(255,255,255, .1);
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 rgb(212, 236, 215));
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+
+</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>691</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(55,55,55,0.5);
+border-radius:2px;
+/*gridline-color: rgba(55,55,55,0.5);*/
+border:0px;
+selection-background-color: red;
+color:white;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="star2">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>451</y>
+     <width>90</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0; 
+background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="star5">
+   <property name="geometry">
+    <rect>
+     <x>658</x>
+     <y>451</y>
+     <width>90</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0; 
+background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="star4">
+   <property name="geometry">
+    <rect>
+     <x>599</x>
+     <y>451</y>
+     <width>90</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0; 
+background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="star3">
+   <property name="geometry">
+    <rect>
+     <x>539</x>
+     <y>451</y>
+     <width>90</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0; 
+background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="star1">
+   <property name="geometry">
+    <rect>
+     <x>421</x>
+     <y>451</y>
+     <width>90</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0; 
+background: transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="LIBPRO.qrc">
+     <normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</normaloff>:/icon/Resources/icon/favourites-filled-star-symbol.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Usernamelbl_6">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>40</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+font-weight:500;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>Book Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Usernamelbl_8">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>40</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+font-weight:500;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>Return date</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Usernamelbl_7">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>40</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+font-weight:500;
+color:white;</string>
+   </property>
+   <property name="text">
+    <string>Your rate</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="LIBPRO.qrc"/>
+ </resources>
+ <connections/>
+</ui>

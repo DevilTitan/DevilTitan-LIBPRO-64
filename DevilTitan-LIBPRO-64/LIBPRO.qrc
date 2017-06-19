@@ -1,0 +1,69 @@
+<RCC>
+  <qresource prefix="/LIBPRO"/>
+  <qresource prefix="/appscreen">
+    <file>Resources/appscreen/flat1 - Copy.png</file>
+    <file>Resources/appscreen/flat2 - Copy.png</file>
+    <file>Resources/appscreen/2a.jpg</file>
+    <file>Resources/appscreen/2b.jpg</file>
+    <file>Resources/appscreen/2c.jpg</file>
+    <file>Resources/appscreen/3a.jpg</file>
+    <file>Resources/appscreen/3b.jpg</file>
+    <file>Resources/appscreen/3c.jpg</file>
+    <file>Resources/appscreen/4a.jpg</file>
+    <file>Resources/appscreen/4b.jpg</file>
+    <file>Resources/appscreen/4c.jpg</file>
+    <file>Resources/appscreen/library.jpg</file>
+    <file>Resources/appscreen/Admin_Background.png</file>
+  </qresource>
+  <qresource prefix="/icon">
+    <file>Resources/icon/administrator.png</file>
+    <file>Resources/icon/dataProcessor.png</file>
+    <file>Resources/icon/librarian.png</file>
+    <file>Resources/icon/reader.png</file>
+    <file>Resources/icon/notification.png</file>
+    <file>Resources/icon/paper-plane.png</file>
+    <file>Resources/icon/logout.png</file>
+    <file>Resources/icon/unchecked.png</file>
+    <file>Resources/icon/checked.png</file>
+    <file>Resources/icon/minus.png</file>
+    <file>Resources/icon/line.png</file>
+    <file>Resources/icon/missing.png</file>
+    <file>Resources/icon/tooshort.png</file>
+    <file>Resources/icon/whiteline.png</file>
+    <file>Resources/icon/Settings-icon.png</file>
+    <file>Resources/icon/trash-2-512.png</file>
+    <file>Resources/icon/345.png</file>
+    <file>Resources/icon/567.png</file>
+    <file>Resources/icon/books (1).png</file>
+    <file>Resources/icon/exchange (1).png</file>
+    <file>Resources/icon/line-chart.png</file>
+    <file>Resources/icon/logout (1).png</file>
+    <file>Resources/icon/open-book (1).png</file>
+    <file>Resources/icon/6969.png</file>
+    <file>Resources/icon/logout (10).png</file>
+    <file>Resources/icon/basket(3).png</file>
+    <file>Resources/icon/shuffle (1).png</file>
+    <file>Resources/icon/shuffle(3).png</file>
+    <file>Resources/icon/cart (2).png</file>
+    <file>Resources/icon/cart(4).png</file>
+    <file>Resources/icon/19073730_1922262664698614_862710217_n.png</file>
+    <file>Resources/icon/19073774_1922262661365281_2146484065_n.png</file>
+    <file>Resources/icon/19073874_1922262651365282_1694282943_n.png</file>
+    <file>Resources/icon/19113043_1922262658031948_1030609975_n.png</file>
+    <file>Resources/icon/19113160_1922262654698615_196996906_n.png</file>
+    <file>Resources/icon/19113252_1922262668031947_720430524_n.png</file>
+    <file>Resources/icon/phone-call.png</file>
+    <file>Resources/icon/earth-globe6666.png</file>
+    <file>Resources/icon/translation.png</file>
+    <file>Resources/icon/worldwide.png</file>
+    <file>Resources/icon/star.png</file>
+    <file>Resources/icon/favourites-filled-star-symbol.png</file>
+    <file>Resources/icon/starr.png</file>
+    <file>Resources/icon/logo.png</file>
+    <file>Resources/icon/padlock (1).png</file>
+  </qresource>
+  <qresource prefix="/barIcon">
+    <file>Resources/icon/envelope.png</file>
+    <file>Resources/icon/user (1).png</file>
+  </qresource>
+</RCC>

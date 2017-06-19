@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Notification</class>
+ <widget class="QDialog" name="Notification">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>855</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableWidget:item
+
+{
+color:white;
+padding:5px;
+margin:15px;
+margin-left:0px;
+font-size:12px;
+font-weight:700;
+font-family:&quot;Open Sans&quot;;
+border:0px;
+}
+QTableWidget
+{
+alternate-background-color: rgba(255,255,255,0.1);
+}
+</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>751</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu Light</family>
+     <pointsize>9</pointsize>
+     <weight>3</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(55,55,55,0.5);
+font: 25 9pt &quot;Ubuntu Light&quot;;
+border-radius:0px;
+gridline-color: rgba(55,55,55,0.5);
+color:white;
+border:0px;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>751</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:5px;
+background-color:rgba(55,55,55,0.33);
+color:white;
+font-weight:600;
+font-family:&quot;Lato&quot;;
+</string>
+   </property>
+   <property name="placeholderText">
+    <string>   Search here.....</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publicChat">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>120</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Public Chat</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+border-radius:0;
+border-top-left-radius:7px;
+background-color:rgba(55,55,55,0.5);
+color:white;
+font-family:&quot;Open Sans&quot;;
+font-weight:600;
+font-size:15px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Time</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publicChat_2">
+   <property name="geometry">
+    <rect>
+     <x>231</x>
+     <y>120</y>
+     <width>571</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Account statistic</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: none;
+border-radius:0;
+border-top-right-radius:7px;
+background-color:rgba(55,55,55,0.5);
+color:white;
+font-family:&quot;Open Sans&quot;;
+font-weight:600;
+font-size:15px;
+border-bottom:rgba(55,55,55,0.25);
+</string>
+   </property>
+   <property name="text">
+    <string notr="true">Notification</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publicChat_3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>530</y>
+     <width>571</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Account statistic</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+border-radius:0;
+border-bottom-right-radius:7px;
+background-color:rgba(55,55,55,0.5);
+color:white;
+font-family:&quot;Open Sans&quot;;
+font-weight:600;
+font-size:15px;
+
+</string>
+   </property>
+   <property name="text">
+    <string notr="true"/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="publicChat_4">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>530</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Public Chat</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add
+</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px;
+border-radius:0;
+border-bottom-left-radius:7px;
+background-color:rgba(55,55,55,0.5);
+color:white;
+font-family:&quot;Open Sans&quot;;
+font-weight:600;
+font-size:15px;
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
